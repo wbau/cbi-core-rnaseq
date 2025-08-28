@@ -1,5 +1,3 @@
-[README.md](https://github.com/user-attachments/files/22025852/README.md)
-
 # cbi-core-rnaseq
 
 An analysis pipeline for **total RNA-seq** data (Illumina paired-end reads).  
@@ -32,8 +30,6 @@ The pipeline implements the following steps:
    - Produces both coordinate-sorted BAM files and gene count tables.
 
 7. **QC metrics**
-   - **Picard**: RNA-seq metrics and insert size metrics.
-   - **Samtools**: alignment statistics.
    - **RSeQC**: library complexity, read distribution, duplication, insert size, inner distance, splice junction metrics, etc.
 
 8. **Reporting**
@@ -48,8 +44,6 @@ The pipeline implements the following steps:
 - BBDuk (BBMap suite)
 - RiboDetector
 - STAR
-- Picard
-- Samtools
 - RSeQC
 - MultiQC
 - R + Bioconductor: DESeq2, edgeR
@@ -124,7 +118,7 @@ nextflow run main.nf -resume --samplesheet input/samplesheet.csv
 
 ## Outputs
 
-- `Reports/` – FastQC, MultiQC, Picard, RSeQC summaries.
+- `Reports/` – FastQC, MultiQC, RSeQC summaries.
 - `Filtering/` – Filtered reads from BBDuk and RiboDetector.
 - `Alignment/STAR/` – Aligned BAM files.
 - `Counts/` – Gene count matrices (`*.ReadsPerGene.out.tab`).
